@@ -1,5 +1,6 @@
 package com.udacit.jwdnd.c1.review.service;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,5 +17,10 @@ public class MessageService {
 
     public String lowercase(){
         return this.message.toLowerCase();
+    }
+
+    @PostConstruct
+    public void postConstruct(){
+        System.out.println("creating messageservice bean");
     }
 }
